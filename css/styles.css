@@ -1,0 +1,170 @@
+html, body{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5rem;
+}
+
+/* GLOBALES */
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 100%;
+    text-align: center;
+}
+.mg-1{
+    margin: 1rem 0 1rem 1rem;
+}
+.pb-1{
+    padding-bottom: 2rem;
+}
+.pl-1{
+    padding-left: 0;
+}
+.pl-2{
+    padding-left: 1rem;
+}
+a{
+    font-size: 1.2rem;
+    color: royalblue;
+    text-decoration: none;
+}
+h2{
+    color: royalblue;
+    margin: 3rem 0;
+}
+hr{
+    width: 80%;
+    background-color: #00800088;
+    border: none;
+    height: .2rem;
+}
+
+/* HEADER */
+.logo-container{
+    background-color: #30608F;
+    display: flex;
+    justify-content: space-between;
+}
+.r-social{
+    width: 5%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.r-social a{
+    margin-right: 5px;
+    font-size: 1.5rem;
+    color: #ffffff83;
+}
+.r-social a:hover{
+    color: #ffffff;
+}
+.nav-container a{
+    overflow: hidden;
+    margin-right: 3%;
+    font-style: oblique;
+    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    background-position: 100%;
+    transition: 275ms;
+}
+.nav-container a:hover{
+    background-position: 0 100%;
+}
+
+/* OFERTA ACADÉMICA */
+.academic-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 15%;
+}
+.academic-of{
+    flex-basis: calc(33.3% - 2rem);
+    border: 0.1rem solid #b5b5b565;
+}
+.content-academic{
+    padding: 1rem;
+    color: #0000009d;
+}
+.content-academic li{
+    list-style: none;
+}
+.content-academic a{
+    color: rgba(65, 105, 225, 0.466);
+    transition: all 500ms;
+}
+.content-academic a:hover{
+    text-decoration: underline;
+    color:royalblue;
+}
+
+/* CONTACTO */
+.contact{
+    background-color: #3a37370c;
+}
+.contact h2{
+    color: #ffffff;
+    background-color: rgba(65, 105, 225, 0.63);
+    padding: 1rem;
+}
+.contact-container{
+    display: flex;
+    justify-content: center;
+}
+.img-contact{
+    width: calc(50% - 1rem);
+    margin-right: 2rem;
+    max-width: 40%;
+}
+.form-container{
+    width: calc(50% - 1rem);
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.form-container input{
+    margin-bottom: .7rem;
+    flex-basis: calc(15% - 1rem);
+}
+.form-container textarea{
+    flex-basis: calc(53% - 1rem);
+}
+.form-container button{
+    flex-basis: calc(17% - 1rem);
+    margin-top: 1rem;
+    width: 50%;
+    padding: .4rem;
+    align-self: flex-end;
+    background-color: rgb(13, 77, 13);
+    border: none;
+    border-radius: 5%;
+    color: #ffffff;
+    transition: 400ms;
+}
+.form-container button:hover{
+    background-color: rgba(13, 77, 13, 0.842);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #264666;
+    padding: 0 1rem;
+    color: #ffffff;
+    font-size: .7rem;
+    align-items: center;
+}
+footer a{
+    max-width: 15%;
+}
