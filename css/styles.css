@@ -1,5 +1,6 @@
 html, body{
     box-sizing: border-box;
+    width: 100%;
 }
 body{
     margin: 0 auto;
@@ -28,7 +29,7 @@ img{
     padding-left: 1rem;
 }
 a{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: royalblue;
     text-decoration: none;
 }
@@ -48,13 +49,18 @@ hr{
     background-color: #30608F;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.logo{
+    padding-right: 5rem;
 }
 .r-social{
-    width: 5%;
-    margin-right: 15px;
     display: flex;
+    flex: 0 0 calc(15% - 1rem);
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    margin-right: 1rem;
 }
 .r-social a{
     margin-right: 5px;
@@ -67,6 +73,7 @@ hr{
 .nav-container a{
     overflow: hidden;
     margin-right: 3%;
+    font-size: 1.5em;
     font-style: oblique;
     background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
     background-clip: text;
@@ -83,15 +90,19 @@ hr{
 /* OFERTA ACADÉMICA */
 .academic-container{
     display: flex;
-    justify-content: space-between;
-    margin: 0rem 15%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 1rem;
+}
+.academic-container div:nth-child(n){
+    margin: 0 1rem;
 }
 .academic-of{
-    flex-basis: calc(33.3% - 2rem);
+    flex: 0 0 20%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem!important;
     border: 0.1rem solid #b5b5b565;
-}
-.content-academic{
-    padding: 1rem;
     color: #0000009d;
 }
 .content-academic li{
@@ -100,6 +111,8 @@ hr{
 .content-academic a{
     color: rgba(65, 105, 225, 0.466);
     transition: all 500ms;
+    font-size: 1.2rem;
+    padding: 0 .5rem;
 }
 .content-academic a:hover{
     text-decoration: underline;
@@ -117,35 +130,37 @@ hr{
 }
 .contact-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    
 }
 .img-contact{
-    width: calc(50% - 1rem);
-    margin-right: 2rem;
-    max-width: 40%;
+    flex: 0 0 calc(50% - 1rem);
+    padding-right: 1rem;
 }
 .form-container{
-    width: calc(50% - 1rem);
+    flex: 0 0 calc(50% - 1rem);
     max-width: 25%;
+    padding-right: 5rem;
     display: flex;
     flex-direction: column;
 }
 .form-container input{
     margin-bottom: .7rem;
-    flex-basis: calc(15% - 1rem);
+    flex: 0 0 calc(15% - 1rem);
 }
 .form-container textarea{
-    flex-basis: calc(53% - 1rem);
+    flex: 0 0 calc(53% - 1rem);
 }
 .form-container button{
-    flex-basis: calc(17% - 1rem);
+    flex: 0 0 calc(17% - 1rem);
     margin-top: 1rem;
     width: 50%;
     padding: .4rem;
     align-self: flex-end;
     background-color: rgb(13, 77, 13);
     border: none;
-    border-radius: 5%;
+    border-radius: 5px;
     color: #ffffff;
     transition: 400ms;
 }
@@ -156,15 +171,58 @@ hr{
 }
 
 /* FOOTER */
-footer{
+.footer-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #264666;
-    padding: 0 1rem;
-    color: #ffffff;
-    font-size: .7rem;
+    overflow: hidden;
+    background-color: #30608F;
     align-items: center;
+    font-size: 70%;
+    padding: 0 1rem;  
+    color: #ffffff;
 }
-footer a{
-    max-width: 15%;
+.logo-footer{
+    padding-right: 1rem;
+    line-height: 0;
+}
+.address{
+    text-align: center;
+    line-height: 1rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px){
+    a{
+        font-size: 100%!important;
+    }
+    .academic-container{
+        margin: 0 5%;
+    }
+    .academic-of{
+        flex: 1 0 20%;
+        max-width: 90%;
+    }
+    .img-contact {
+        flex: 0 0 70%!important;
+        margin-bottom: 1rem;
+        padding-right: 0;
+    }
+    .form-container{
+        flex: 0 1 100%!important;
+        max-width: 70%;
+        height: 15rem;
+        margin-bottom: 1rem;
+        padding-right: 0;
+    }
+    .form-container button{
+        width: 100%;
+    }
+    footer:nth-child(n){
+        justify-content: center;
+        padding: 0 2rem;
+    }
+    .logo-footer{
+        padding: 0 3rem;
+    }    
 }
